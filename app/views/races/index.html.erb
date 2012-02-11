@@ -1,0 +1,37 @@
+<h1>Listing races</h1>
+
+<table>
+  <tr>
+    <th>Race category</th>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Date</th>
+    <th>Start time</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Country</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= race.race_category_id %></td>
+    <td><%= race.name %></td>
+    <td><%= race.year %></td>
+    <td><%= race.date %></td>
+    <td><%= race.start_time %></td>
+    <td><%= race.city %></td>
+    <td><%= race.state %></td>
+    <td><%= race.country %></td>
+    <td><%= link_to 'Show', race %></td>
+    <td><%= link_to 'Edit', edit_race_path(race) %></td>
+    <td><%= link_to 'Destroy', race, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Race', new_race_path %>

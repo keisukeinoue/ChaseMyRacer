@@ -1,0 +1,2 @@
+module RaceCategoriesHelper
+end

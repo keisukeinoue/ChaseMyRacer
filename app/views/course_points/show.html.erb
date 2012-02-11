@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Race:</b>
+  <%= @course_point.race_id %>
+</p>
+
+<p>
+  <b>Sequence:</b>
+  <%= @course_point.sequence %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @course_point.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @course_point.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_point_path(@course_point) %> |
+<%= link_to 'Back', course_points_path %>

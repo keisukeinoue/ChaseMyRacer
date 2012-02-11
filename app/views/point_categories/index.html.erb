@@ -1,0 +1,25 @@
+<h1>Listing point_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @point_categories.each do |point_category| %>
+  <tr>
+    <td><%= point_category.name %></td>
+    <td><%= point_category.image %></td>
+    <td><%= link_to 'Show', point_category %></td>
+    <td><%= link_to 'Edit', edit_point_category_path(point_category) %></td>
+    <td><%= link_to 'Destroy', point_category, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Point category', new_point_category_path %>

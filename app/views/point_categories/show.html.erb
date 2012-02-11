@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @point_category.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @point_category.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_point_category_path(@point_category) %> |
+<%= link_to 'Back', point_categories_path %>

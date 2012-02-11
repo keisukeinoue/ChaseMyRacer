@@ -1,0 +1,2 @@
+module PointCategoriesHelper
+end
