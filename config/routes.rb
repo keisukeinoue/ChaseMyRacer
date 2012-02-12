@@ -1,4 +1,7 @@
 Chasemyracer::Application.routes.draw do
+
+  match 'points/list' => 'points#list'
+
   resources :points
 
   resources :point_categories

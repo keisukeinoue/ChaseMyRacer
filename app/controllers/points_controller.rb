@@ -1,14 +1,33 @@
 class PointsController < ApplicationController
   # GET /points
   # GET /points.json
-  def index
-    @points = Point.all
+
+  def list
+    if (params[:race_id])
+    @points = Point.find_all_by_race_id(params[:race_id])
+    else
+      @points = Point.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @points }
     end
   end
+
+  def index
+     if (params[:race_id])
+    @points = Point.find_all_by_race_id(params[:race_id])
+    else
+      @points = Point.all
+    end
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @points}
+    end
+  end
+
 
   # GET /points/1
   # GET /points/1.json

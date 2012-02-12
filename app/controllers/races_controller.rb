@@ -6,7 +6,7 @@ class RacesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @races }
+      format.json { render :json => @races.to_json(Race.list_options) }
     end
   end
 
@@ -17,7 +17,7 @@ class RacesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @race }
+      format.json { render :json => @race.to_json(Race.show_options) }
     end
   end
 
