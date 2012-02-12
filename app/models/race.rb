@@ -3,7 +3,7 @@ class Race < ActiveRecord::Base
   belongs_to :race_category
 
   def self.show_options
-    {:methods => [:category_name], :include => [:points]}
+    {:only => [:id, :name, :date, :city, :state, :country], :methods => [:category_name], :include => [:points]}
   end
 
   def self.list_options
